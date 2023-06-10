@@ -1,0 +1,4 @@
+[alembic]
+alembic init <name>
+alembic revision --autogenerate -m <name>
+alembic upgrade head

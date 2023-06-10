@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "FastAPI project"
+version = "0.1.0"
+description = ""
+authors = ["Ihor Voitiuk <ihorvoitiukk@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.1"
+uvicorn = {extras = ["standard"], version = "^0.21.1"}
+sqlalchemy = "^2.0.9"
+alembic = "^1.10.3"
+psycopg2-binary = "^2.9.6"
+pydantic = {extras = ["email"], version = "^1.10.7"}
+libgravatar = "^1.0.4"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-multipart = "^0.0.6"
+fastapi-mail = "^1.2.7"
+fastapi-limiter = "^0.1.5"
+cloudinary = "^1.32.0"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^6.2.1"
+faker = "^18.4.0"
+
+
+[tool.poetry.group.test.dependencies]
+httpx = "^0.24.0"
+pytest = "^7.3.1"
+pytest-mock = "^3.10.0"
+pytest-cov = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

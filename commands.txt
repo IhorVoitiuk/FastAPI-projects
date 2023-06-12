@@ -1,7 +1,0 @@
-[alembic]
-alembic init <name>
-alembic revision --autogenerate -m <name>
-alembic upgrade head
-
-[uvicorn]
-uvicorn main:app --host localhost --port 8000 --reload

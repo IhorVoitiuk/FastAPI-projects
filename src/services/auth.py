@@ -200,11 +200,11 @@ class Auth:
                 detail="Invalid token for email verification",
             )
 
-    async def current_user(
+    async def get_current_user(
         self, token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)
     ):
         """
-        The current_user function is a dependency that will be injected into the
+        The get_current_user function is a dependency that will be injected into the
             function that requires it. It will return the user object for the current
             request, if there is one. If not, it raises an HTTPException with status code 401.
 
@@ -214,7 +214,7 @@ class Auth:
         :return: The user object associated with the token
         :doc-author: Ihor Voitiuk
         """
-        
+
         credentials_exception = HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Could not validate credentials",

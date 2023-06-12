@@ -36,11 +36,11 @@ async def custom_middleware(request: Request, call_next):
 
 @app.on_event("startup")
 async def startup():
-    print('------------- STARTUP --------------')
+    print("------------- STARTUP --------------")
     r = await redis.Redis(
         host=settings.redis_host,
         port=settings.redis_port,
-        db=0,
+        db=settings.redis_db,
         encoding="utf-8",
         decode_responses=True,
     )
@@ -77,4 +77,4 @@ app.include_router(contacts.router, prefix="/api")
 
 
 if __name__ == "__main__":
-    uvicorn.run(app="main:app", reload=True)
+    uvicorn.run(app="main:app", host="0.0.0.0", port=8000, reload=True)

@@ -37,10 +37,10 @@ def test_login_user_not_confirmed(client, user):
 
 
 def test_login_user(client, session, user):
-    current_user: User = (
+    get_current_user: User = (
         session.query(User).filter(User.email == user.get("email")).first()
     )
-    current_user.confirmed = True
+    get_current_user.confirmed = True
     session.commit()
     response = client.post(
         "/api/auth/login",

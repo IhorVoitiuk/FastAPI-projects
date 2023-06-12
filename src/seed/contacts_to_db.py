@@ -5,7 +5,7 @@ from src.database.models import Contact
 
 fake = Faker()
 session = DBSession()
-DEFAULT_CONTACTS = 100
+DEFAULT_CONTACTS = 50
 
 
 def create_contact_person(quantity):
@@ -34,3 +34,4 @@ def create_contact_person(quantity):
 
 if __name__ == "__main__":
     create_contact_person(DEFAULT_CONTACTS)
+    print("Contacts created:", DEFAULT_CONTACTS)

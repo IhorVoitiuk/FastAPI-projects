@@ -235,7 +235,7 @@ async def updade_contac(
     body: PsswordModel,
     user_email: str = Path(description="The email of the user to update password"),
     db: Session = Depends(get_db),
-    current_user: Contact = Depends(auth_service.current_user),
+    get_current_user: Contact = Depends(auth_service.get_current_user),
 ):
     """
     The updade_contac function update password user.
@@ -243,7 +243,7 @@ async def updade_contac(
     :param body: PsswordModel: Get the password and confirm_password from the request body
     :param user_email: str: Get the email of the user to update password
     :param db: Session: Get the database session
-    :param current_user: Contact: Get the current user
+    :param get_current_user: Contact: Get the current user
     :param : Get the user's email
     :return: A message
     :doc-author: Ihor Voitiuk

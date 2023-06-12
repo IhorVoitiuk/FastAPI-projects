@@ -11,10 +11,10 @@ def access_token(client, user, session, monkeypatch):
     mock_send_email = MagicMock()
     monkeypatch.setattr("src.routes.auth.send_email", mock_send_email)
     client.post("/api/auth/signup", json=user)
-    current_user: User = (
+    get_current_user: User = (
         session.query(User).filter(User.email == user.get("email")).first()
     )
-    current_user.confirmed = True
+    get_current_user.confirmed = True
     session.commit()
     response = client.post(
         "/api/auth/login",

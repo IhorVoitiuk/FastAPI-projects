@@ -29,8 +29,12 @@ async def send_email(
     The send_email function is used to send an email to a user.
         It takes in the following parameters:
             - email: The recipient's email address.
-            - username: The recipient's username. This will be displayed in the body of the message, and can be customized by editing templates/email_template.html or templates/email_template_reset_password.html .
-            - host: The hostname of your server (e.g., localhost; if you're running this locally). This will also be displayed in the body of the message, and can be customized by editing templates/email_template
+            - username: The recipient's username. This will be displayed in 
+            the body of the message, and can be customized by editing 
+            templates/email_template.html or templates/email_template_reset_password.html .
+            - host: The hostname of your server (e.g., localhost; if you're running 
+            this locally). This will also be displayed in the body of the message, 
+            and can be customized by editing templates/email_template
 
     :param email: EmailStr: Pass in the email address of the user
     :param username: str: Fill in the username field in the email template

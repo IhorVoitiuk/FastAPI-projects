@@ -22,7 +22,6 @@ class Role(enum.Enum):
     user: str = 'user'
 
 
-
 class Contact(Base):
     __tablename__ = "contacts"
     id = Column(Integer, primary_key=True)
@@ -38,6 +37,16 @@ class Contact(Base):
         "user_id", ForeignKey("users.id", ondelete="CASCADE"), default=None
     )
     user = relationship("User", backref="contacts")
+
+
+class Document(Base):
+    __tablename__ = "documents"
+    id = Column(Integer, primary_key=True)
+    count = Column(Integer, nullable=True)
+    user_id = Column(
+        "user_id", ForeignKey("users.id", ondelete="CASCADE"), default=None
+    )
+    user = relationship("User", backref="documents")
 
 
 class User(Base):

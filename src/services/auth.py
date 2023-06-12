@@ -33,7 +33,7 @@ class Auth:
     SECRET_KEY = settings.secret_key_jwt
     ALGORITHM = settings.algorithm
     oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
-    redis = redis_db.Redis(host="localhost", port=6379, db=0)
+    redis = redis_db.Redis(host="localhost", port=6379, db=1)
 
     def verify_password(self, plain_password, hashed_password):
         """
@@ -85,7 +85,7 @@ class Auth:
         if expires_delta:
             expire = datetime.utcnow() + timedelta(seconds=expires_delta)
         else:
-            expire = datetime.utcnow() + timedelta(minutes=15)
+            expire = datetime.utcnow() + timedelta(minutes=180)
         to_encode.update(
             {"iat": datetime.utcnow(), "exp": expire, "scope": "access_token"}
         )
@@ -221,7 +221,6 @@ class Auth:
         )
 
         try:
-            # Decode JWT
             payload = jwt.decode(token, self.SECRET_KEY, algorithms=[self.ALGORITHM])
             if payload["scope"] == "access_token":
                 email = payload["sub"]

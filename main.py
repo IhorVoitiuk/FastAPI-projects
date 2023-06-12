@@ -14,6 +14,19 @@ from src.conf.config import settings
 
 app = FastAPI()
 
+@app.on_event("startup")
+async def startup():
+    print("------------- STARTUP --------------")
+    r = await redis.Redis(
+        host=settings.redis_host,
+        port=settings.redis_port,
+        db=settings.redis_db,
+        encoding="utf-8",
+        decode_responses=True,
+    )
+    await FastAPILimiter.init(r)
+
+
 origins = ["http://localhost:8000"]
 
 app.add_middleware(
@@ -32,19 +45,6 @@ async def custom_middleware(request: Request, call_next):
     during = time.time() - start_time
     response.headers["performance"] = str(during)
     return response
-
-
-@app.on_event("startup")
-async def startup():
-    print("------------- STARTUP --------------")
-    r = await redis.Redis(
-        host=settings.redis_host,
-        port=settings.redis_port,
-        db=settings.redis_db,
-        encoding="utf-8",
-        decode_responses=True,
-    )
-    await FastAPILimiter.init(r)
 
 
 @app.get("/api/healthchecker")

@@ -9,10 +9,11 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text
 
 from src.database.db import get_db
-from src.routes import contacts, auth, users
+from src.routes import contacts, auth, users, documents
 from src.conf.config import settings
 
 app = FastAPI()
+
 
 @app.on_event("startup")
 async def startup():
@@ -74,6 +75,7 @@ def main_pange():
 app.include_router(auth.router, prefix="/api")
 app.include_router(users.router, prefix="/api")
 app.include_router(contacts.router, prefix="/api")
+app.include_router(documents.router, prefix="/api")
 
 
 if __name__ == "__main__":

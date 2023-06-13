@@ -70,3 +70,14 @@ class PasswordSchema(BaseModel):
 class PsswordModel(BaseModel):
     password: str
     confirm_password: str
+
+
+class DocumentModel(BaseModel):
+    count: int
+
+
+class CompressionRequest(BaseModel):
+    compression_quality: str = Field(
+        "lossless compression",
+        description="Compression quality. Supported formats: lossless compression, remove images, remove duplication",
+    )

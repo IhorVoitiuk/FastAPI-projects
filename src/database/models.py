@@ -42,11 +42,8 @@ class Contact(Base):
 class Document(Base):
     __tablename__ = "documents"
     id = Column(Integer, primary_key=True)
-    count = Column(Integer, nullable=True)
-    user_id = Column(
-        "user_id", ForeignKey("users.id", ondelete="CASCADE"), default=None
-    )
-    user = relationship("User", backref="documents")
+    total_count = Column(Integer, nullable=True, default=0)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True)
 
 
 class User(Base):
@@ -60,3 +57,4 @@ class User(Base):
     refresh_token = Column(String(255), nullable=True)
     confirmed = Column(Boolean, default=False)
     role = Column('role', Enum(Role), default=Role.user)
+    document = relationship("Document", uselist=False, backref="user")

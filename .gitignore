@@ -6,3 +6,4 @@ __pycache__
 test.db
 .pytest_cache
 commands.txt
+postgres-data

@@ -45,6 +45,13 @@ REST API repository Documents
    :undoc-members:
    :show-inheritance:
 
+REST API repository SMS
+==============================
+.. automodule:: src.repository.sms
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 REST API routes Auth
 =========================
 .. automodule:: src.routes.auth
@@ -73,6 +80,13 @@ REST API routes Documents
    :undoc-members:
    :show-inheritance:
 
+REST API routes SMS
+===========================
+.. automodule:: src.routes.sms
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 REST API service Auth
 =========================
 .. automodule:: src.services.auth
@@ -97,6 +111,13 @@ REST API service Export
 REST API service Documents
 ===========================
 .. automodule:: src.services.documents.pdf_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+REST API service SMS
+=========================
+.. automodule:: src.services.send_sms
    :members:
    :undoc-members:
    :show-inheritance:

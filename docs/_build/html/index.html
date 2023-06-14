@@ -52,8 +52,8 @@
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="main.main_pange">
-<span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">main_pange</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.main_pange" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="main.root">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.root" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -240,13 +240,13 @@ the db session is committed so that it can be saved in our database.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.repository.contacts.create_contact">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">create_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.create_contact" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>The create_contact function takes in a Contact object and adds it to the database.</dt><dd><dl class="simple">
+<dd><p>The create_contact function takes in a Contact object and adds it to the database.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>Args:</dt><dd><p>body (ContactModel): The Contact object to be added to the database.</p>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -266,13 +266,13 @@ the db session is committed so that it can be saved in our database.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.repository.contacts.get_contact_by_id">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contact_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.get_contact_by_id" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>The get_contact_by_id function takes in a contact_id and returns the corresponding Contact object.</dt><dd><dl class="simple">
+<dd><p>The get_contact_by_id function takes in a contact_id and returns the corresponding Contact object.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>Args:</dt><dd><p>contact_id (int): The id of the desired Contact object.</p>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -292,14 +292,14 @@ the db session is committed so that it can be saved in our database.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.repository.contacts.get_contacts">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.get_contacts" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>The get_contacts function returns a list of contacts from the database.</dt><dd><dl class="simple">
+<dd><p>The get_contacts function returns a list of contacts from the database.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>Args:</dt><dd><p>limit (int): The number of contacts to return.
 offset (int): The index at which to start returning contacts.</p>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -320,14 +320,14 @@ offset (int): The index at which to start returning contacts.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.repository.contacts.remove_contact">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">remove_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.remove_contact" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>The remove_contact function removes a contact from the database.</dt><dd><dl class="simple">
+<dd><p>The remove_contact function removes a contact from the database.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>Args:</dt><dd><p>contact_id (int): The id of the contact to be removed.
 db (Session): A session object that is used to query and update the database.</p>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -347,10 +347,10 @@ db (Session): A session object that is used to query and update the database.</p
 <dl class="py function">
 <dt class="sig sig-object py" id="src.repository.contacts.search_contacts">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">search_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.search_contacts" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>The search_contacts function searches the database for contacts that match the given parameters.</dt><dd><p>If no parameters are provided, it returns None.</p>
-</dd>
-</dl>
+<dd><p>The search_contacts function searches the database for contacts that match the given parameters.</p>
+<blockquote>
+<div><p>If no parameters are provided, it returns None.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -372,14 +372,14 @@ db (Session): A session object that is used to query and update the database.</p
 <dl class="py function">
 <dt class="sig sig-object py" id="src.repository.contacts.update_contact">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">update_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.update_contact" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>The update_contact function takes in a Contact object and updates it in the database.</dt><dd><dl class="simple">
+<dd><p>The update_contact function takes in a Contact object and updates it in the database.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>Args:</dt><dd><p>contact_id (int): The id of the desired Contact object.
 body (ContactModel): The Contact object to be updated in the database.</p>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -425,14 +425,14 @@ If no such user exists, it returns None.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="src.repository.documents.update_documents_count">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.documents.</span></span><span class="sig-name descname"><span class="pre">update_documents_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.documents.update_documents_count" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>The update_documents_count function updates the number of documents a user has.</dt><dd><dl class="simple">
+<dd><p>The update_documents_count function updates the number of documents a user has.</p>
+<blockquote>
+<div><dl class="simple">
 <dt>Args:</dt><dd><p>email (str): The email address of the user to update.
 count (int): The amount to increment or decrement by.  If negative, will decrement instead of incrementing.</p>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -443,6 +443,59 @@ count (int): The amount to increment or decrement by.  If negative, will decreme
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The number of documents a user has</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ihor Voitiuk</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.repository.sms">
+<span id="rest-api-repository-sms"></span><h1>REST API repository SMS<a class="headerlink" href="#module-src.repository.sms" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.sms.create_sms">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.sms.</span></span><span class="sig-name descname"><span class="pre">create_sms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SendSMSModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.sms.create_sms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The create_sms function creates a new sms message.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Args:</dt><dd><p>body (SendSMSModel): The request body, in this case containing the message to send.
+user_email (str): The email of the user sending the SMS message.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – SendSMSModel: Pass the data from the request body</p></li>
+<li><p><strong>user_email</strong> – str: Get the user by email</p></li>
+<li><p><strong>db</strong> – Session: Access the database</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An object of type sendsmsresponse</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ihor Voitiuk</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.sms.get_user_by_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.sms.</span></span><span class="sig-name descname"><span class="pre">get_user_by_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">User</span></span></span><a class="headerlink" href="#src.repository.sms.get_user_by_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get_user_by_email function takes an email and a database session as arguments.
+It then queries the database for a user with that email address, returning the first result.
+If no such user exists, it returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> – str: Specify the type of the parameter</p></li>
+<li><p><strong>db</strong> – Session: Pass in the database session</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first user in the database that matches the email provided</p>
 </dd>
 <dt class="field-odd">Doc-author<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Ihor Voitiuk</p>
@@ -865,6 +918,27 @@ The function takes in an optional compression parameter, which can be one of thr
 </dl>
 <p>:param : Get the current user
 :return: A streamingresponse object
+:doc-author: Ihor Voitiuk</p>
+</dd></dl>
+
+</section>
+<section id="module-src.routes.sms">
+<span id="rest-api-routes-sms"></span><h1>REST API routes SMS<a class="headerlink" href="#module-src.routes.sms" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.sms.create_sms">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.sms.</span></span><span class="sig-name descname"><span class="pre">create_sms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SendSMSModel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.sms.create_sms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The create_sms function creates a new sms in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> – SendSMSModel: Get the data from the request body</p></li>
+<li><p><strong>db</strong> – Session: Get the database session</p></li>
+<li><p><strong>get_current_user</strong> – User: Get the current user</p></li>
+</ul>
+</dd>
+</dl>
+<p>:param : Get the current user from the database
+:return: A new sms object
 :doc-author: Ihor Voitiuk</p>
 </dd></dl>
 
@@ -1365,6 +1439,40 @@ returns the same file with all images removed.</p>
 </dd></dl>
 
 </section>
+<section id="module-src.services.send_sms">
+<span id="rest-api-service-sms"></span><h1>REST API service SMS<a class="headerlink" href="#module-src.services.send_sms" title="Permalink to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.services.send_sms.send_sms">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.services.send_sms.</span></span><span class="sig-name descname"><span class="pre">send_sms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.send_sms.send_sms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The send_sms function sends an SMS message to a given phone number.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>messages (str): The text of the message you want to send, up to 1600 characters in length.
+from_number (str): A Twilio phone number in E.164 format, like +16175551212 or +442033890530.</p>
+<blockquote>
+<div><p>You can find your Twilio phone numbers here: <a class="reference external" href="https://twilio-python-client-demo/console/phone-numbers/incoming">https://twilio-python-client-demo/console/phone-numbers/incoming</a></p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>messages</strong> – str: Pass the message to be sent</p></li>
+<li><p><strong>from_number</strong> – str: Specify the twilio phone number that will be sending the sms message</p></li>
+<li><p><strong>to_number</strong> – str: Specify the number to send the message to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ihor Voitiuk</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-src.seed.contacts_to_db">
 <span id="rest-api-seed-contacts-to-db"></span><h1>REST API seed Contacts to db<a class="headerlink" href="#module-src.seed.contacts_to_db" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
@@ -1410,7 +1518,7 @@ The function takes one argument which is the quantity of contacts to be created.
 <li><a class="reference internal" href="#module-main">REST API main</a><ul>
 <li><a class="reference internal" href="#main.custom_middleware"><code class="docutils literal notranslate"><span class="pre">custom_middleware()</span></code></a></li>
 <li><a class="reference internal" href="#main.healthchecker"><code class="docutils literal notranslate"><span class="pre">healthchecker()</span></code></a></li>
-<li><a class="reference internal" href="#main.main_pange"><code class="docutils literal notranslate"><span class="pre">main_pange()</span></code></a></li>
+<li><a class="reference internal" href="#main.root"><code class="docutils literal notranslate"><span class="pre">root()</span></code></a></li>
 <li><a class="reference internal" href="#main.startup"><code class="docutils literal notranslate"><span class="pre">startup()</span></code></a></li>
 </ul>
 </li>
@@ -1440,6 +1548,11 @@ The function takes one argument which is the quantity of contacts to be created.
 <li><a class="reference internal" href="#module-src.repository.documents">REST API repository Documents</a><ul>
 <li><a class="reference internal" href="#src.repository.documents.get_user_by_email"><code class="docutils literal notranslate"><span class="pre">get_user_by_email()</span></code></a></li>
 <li><a class="reference internal" href="#src.repository.documents.update_documents_count"><code class="docutils literal notranslate"><span class="pre">update_documents_count()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.repository.sms">REST API repository SMS</a><ul>
+<li><a class="reference internal" href="#src.repository.sms.create_sms"><code class="docutils literal notranslate"><span class="pre">create_sms()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.sms.get_user_by_email"><code class="docutils literal notranslate"><span class="pre">get_user_by_email()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-src.routes.auth">REST API routes Auth</a><ul>
@@ -1472,6 +1585,10 @@ The function takes one argument which is the quantity of contacts to be created.
 <li><a class="reference internal" href="#module-src.routes.documents">REST API routes Documents</a><ul>
 <li><a class="reference internal" href="#src.routes.documents.compress_pdf_route"><code class="docutils literal notranslate"><span class="pre">compress_pdf_route()</span></code></a></li>
 <li><a class="reference internal" href="#src.routes.documents.convert_images_to_pdf_route"><code class="docutils literal notranslate"><span class="pre">convert_images_to_pdf_route()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.routes.sms">REST API routes SMS</a><ul>
+<li><a class="reference internal" href="#src.routes.sms.create_sms"><code class="docutils literal notranslate"><span class="pre">create_sms()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-src.services.auth">REST API service Auth</a><ul>
@@ -1512,6 +1629,10 @@ The function takes one argument which is the quantity of contacts to be created.
 <li><a class="reference internal" href="#src.services.documents.pdf_utils.process_image"><code class="docutils literal notranslate"><span class="pre">process_image()</span></code></a></li>
 <li><a class="reference internal" href="#src.services.documents.pdf_utils.remove_duplication"><code class="docutils literal notranslate"><span class="pre">remove_duplication()</span></code></a></li>
 <li><a class="reference internal" href="#src.services.documents.pdf_utils.remove_images"><code class="docutils literal notranslate"><span class="pre">remove_images()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.services.send_sms">REST API service SMS</a><ul>
+<li><a class="reference internal" href="#src.services.send_sms.send_sms"><code class="docutils literal notranslate"><span class="pre">send_sms()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-src.seed.contacts_to_db">REST API seed Contacts to db</a><ul>

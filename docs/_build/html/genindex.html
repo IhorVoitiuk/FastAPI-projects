@@ -101,10 +101,10 @@
 </li>
       <li><a href="index.html#src.services.documents.pdf_utils.copy_file">copy_file() (in module src.services.documents.pdf_utils)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#src.services.auth.Auth.create_access_token">create_access_token() (src.services.auth.Auth method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#src.repository.contacts.create_contact">create_contact() (in module src.repository.contacts)</a>
 </li>
       <li><a href="index.html#src.seed.contacts_to_db.create_contact_person">create_contact_person() (in module src.seed.contacts_to_db)</a>
@@ -115,6 +115,12 @@
 </li>
       <li><a href="index.html#src.services.auth.Auth.create_refresh_token">create_refresh_token() (src.services.auth.Auth method)</a>
 </li>
+      <li><a href="index.html#src.repository.sms.create_sms">create_sms() (in module src.repository.sms)</a>
+
+      <ul>
+        <li><a href="index.html#src.routes.sms.create_sms">(in module src.routes.sms)</a>
+</li>
+      </ul></li>
       <li><a href="index.html#src.repository.users.create_user">create_user() (in module src.repository.users)</a>
 </li>
       <li><a href="index.html#main.custom_middleware">custom_middleware() (in module main)</a>
@@ -170,6 +176,8 @@
       <li><a href="index.html#src.repository.documents.get_user_by_email">get_user_by_email() (in module src.repository.documents)</a>
 
       <ul>
+        <li><a href="index.html#src.repository.sms.get_user_by_email">(in module src.repository.sms)</a>
+</li>
         <li><a href="index.html#src.repository.users.get_user_by_email">(in module src.repository.users)</a>
 </li>
       </ul></li>
@@ -202,8 +210,6 @@
         <li><a href="index.html#module-main">module</a>
 </li>
       </ul></li>
-      <li><a href="index.html#main.main_pange">main_pange() (in module main)</a>
-</li>
       <li>
     module
 
@@ -216,6 +222,8 @@
 </li>
         <li><a href="index.html#module-src.repository.documents">src.repository.documents</a>
 </li>
+        <li><a href="index.html#module-src.repository.sms">src.repository.sms</a>
+</li>
         <li><a href="index.html#module-src.repository.users">src.repository.users</a>
 </li>
         <li><a href="index.html#module-src.routes.auth">src.routes.auth</a>
@@ -223,6 +231,8 @@
         <li><a href="index.html#module-src.routes.contacts">src.routes.contacts</a>
 </li>
         <li><a href="index.html#module-src.routes.documents">src.routes.documents</a>
+</li>
+        <li><a href="index.html#module-src.routes.sms">src.routes.sms</a>
 </li>
         <li><a href="index.html#module-src.routes.users">src.routes.users</a>
 </li>
@@ -235,6 +245,8 @@
         <li><a href="index.html#module-src.services.email.mail">src.services.email.mail</a>
 </li>
         <li><a href="index.html#module-src.services.export">src.services.export</a>
+</li>
+        <li><a href="index.html#module-src.services.send_sms">src.services.send_sms</a>
 </li>
       </ul></li>
   </ul></td>
@@ -279,10 +291,10 @@
         <li><a href="index.html#src.routes.contacts.remove_contact">(in module src.routes.contacts)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#src.services.documents.pdf_utils.remove_duplication">remove_duplication() (in module src.services.documents.pdf_utils)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="index.html#src.services.documents.pdf_utils.remove_images">remove_images() (in module src.services.documents.pdf_utils)</a>
 </li>
       <li><a href="index.html#src.routes.auth.request_email">request_email() (in module src.routes.auth)</a>
@@ -294,6 +306,8 @@
 </li>
       </ul></li>
       <li><a href="index.html#src.routes.auth.reset_password_token">reset_password_token() (in module src.routes.auth)</a>
+</li>
+      <li><a href="index.html#main.root">root() (in module main)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -310,6 +324,8 @@
       <li><a href="index.html#src.services.auth.Auth.SECRET_KEY">SECRET_KEY (src.services.auth.Auth attribute)</a>
 </li>
       <li><a href="index.html#src.services.email.mail.send_email">send_email() (in module src.services.email.mail)</a>
+</li>
+      <li><a href="index.html#src.services.send_sms.send_sms">send_sms() (in module src.services.send_sms)</a>
 </li>
       <li><a href="index.html#src.routes.auth.signup">signup() (in module src.routes.auth)</a>
 </li>
@@ -332,6 +348,13 @@
 
       <ul>
         <li><a href="index.html#module-src.repository.documents">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.repository.sms
+
+      <ul>
+        <li><a href="index.html#module-src.repository.sms">module</a>
 </li>
       </ul></li>
       <li>
@@ -362,6 +385,13 @@
 
       <ul>
         <li><a href="index.html#module-src.routes.documents">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.routes.sms
+
+      <ul>
+        <li><a href="index.html#module-src.routes.sms">module</a>
 </li>
       </ul></li>
       <li>
@@ -404,6 +434,13 @@
 
       <ul>
         <li><a href="index.html#module-src.services.export">module</a>
+</li>
+      </ul></li>
+      <li>
+    src.services.send_sms
+
+      <ul>
+        <li><a href="index.html#module-src.services.send_sms">module</a>
 </li>
       </ul></li>
       <li><a href="index.html#main.startup">startup() (in module main)</a>

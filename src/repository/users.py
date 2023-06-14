@@ -25,7 +25,6 @@ async def create_user(body: UserModel, db: Session) -> User:
     The create_user function creates a new user in the database.
     It takes a UserModel object and returns a User object.
 
-
     :param body: UserModel: Create a new user object from the data passed in
     :param db: Session: Pass in the database session
     :return: A user object

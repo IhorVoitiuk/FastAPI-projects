@@ -9,6 +9,7 @@ from src.schemas import ContactModel
 async def get_contact_by_id(contact_id: int, db: Session):
     """
     The get_contact_by_id function takes in a contact_id and returns the corresponding Contact object.
+
         Args:
             contact_id (int): The id of the desired Contact object.
 
@@ -25,6 +26,7 @@ async def get_contact_by_id(contact_id: int, db: Session):
 async def get_contacts(limit: int, offset: int, db: Session):
     """
     The get_contacts function returns a list of contacts from the database.
+
         Args:
             limit (int): The number of contacts to return.
             offset (int): The index at which to start returning contacts.
@@ -43,6 +45,7 @@ async def get_contacts(limit: int, offset: int, db: Session):
 async def create_contact(body: ContactModel, db: Session):
     """
     The create_contact function takes in a Contact object and adds it to the database.
+
         Args:
             body (ContactModel): The Contact object to be added to the database.
 
@@ -62,6 +65,7 @@ async def create_contact(body: ContactModel, db: Session):
 async def update_contact(contact_id: int, body: ContactModel, db: Session):
     """
     The update_contact function takes in a Contact object and updates it in the database.
+    
         Args:
             contact_id (int): The id of the desired Contact object.
             body (ContactModel): The Contact object to be updated in the database.
@@ -88,6 +92,7 @@ async def update_contact(contact_id: int, body: ContactModel, db: Session):
 async def remove_contact(contact_id: int, db: Session):
     """
     The remove_contact function removes a contact from the database.
+
         Args:
             contact_id (int): The id of the contact to be removed.
             db (Session): A session object that is used to query and update the database.
@@ -110,6 +115,7 @@ async def search_contacts(
 ):
     """
     The search_contacts function searches the database for contacts that match the given parameters.
+    
         If no parameters are provided, it returns None.
 
     :param db: Session: Pass in the database session

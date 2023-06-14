@@ -18,6 +18,8 @@ class Settings(BaseSettings):
     cloudinary_name: str = "name"
     cloudinary_api_key: int = 326488457974591
     cloudinary_api_secret: str = "secret"
+    twilio_account_sid: str = "secret_key"
+    twilio_auth_token: str = "secret_key"
 
     class Config:
         env_file = ".env"

@@ -81,3 +81,23 @@ class CompressionRequest(BaseModel):
         "lossless compression",
         description="Compression quality. Supported formats: lossless compression, remove images, remove duplication",
     )
+
+
+class SendSMSModel(BaseModel):
+    message: str = Field(
+        "Hello, thank you for using our application.\nGood day!",
+        min_length=2,
+        max_length=240,
+    )
+    from_phone: str = Field("+14302335529", min_length=2, max_length=20)
+    to_phone: str = Field("+380639249861", min_length=13, max_length=13)
+
+
+class SendSMSResponse(SendSMSModel):
+    id: int = 1
+    created_at: datetime
+    user_id: int
+    total_sms: int
+
+    class Config:
+        orm_mode = True

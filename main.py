@@ -1,16 +1,22 @@
 import time
 import redis.asyncio as redis
 
+from pathlib import Path
+
 import uvicorn
 from fastapi import FastAPI, Depends, HTTPException, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_limiter import FastAPILimiter
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
 from src.database.db import get_db
-from src.routes import contacts, auth, users, documents
+from src.routes import contacts, auth, users, documents, sms
 from src.conf.config import settings
+
 
 app = FastAPI()
 
@@ -67,15 +73,24 @@ def healthchecker(db: Session = Depends(get_db)):
         )
 
 
-@app.get("/")
-def main_pange():
-    return {"greating": "Hello FastAPI"}
+templates = Jinja2Templates(directory="templates")
+BASE_DIR = Path(__file__).parent
+app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
+
+
+@app.get("/", response_class=HTMLResponse)
+async def root(request: Request):
+    context = {"docs_url": f"{origins[0]}/docs"}
+    return templates.TemplateResponse(
+        "index.html", {"request": request, "context": context}
+    )
 
 
 app.include_router(auth.router, prefix="/api")
 app.include_router(users.router, prefix="/api")
 app.include_router(contacts.router, prefix="/api")
 app.include_router(documents.router, prefix="/api")
+app.include_router(sms.router, prefix="/api")
 
 
 if __name__ == "__main__":

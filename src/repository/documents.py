@@ -21,9 +21,10 @@ async def get_user_by_email(email: str, db: Session) -> User:
 async def update_documents_count(user_email: str, count_files: int, db: Session):
     """
     The update_documents_count function updates the number of documents a user has.
-                    Args:
-                        email (str): The email address of the user to update.
-                        count (int): The amount to increment or decrement by.  If negative, will decrement instead of incrementing.
+
+        Args:
+            email (str): The email address of the user to update.
+            count (int): The amount to increment or decrement by.  If negative, will decrement instead of incrementing.
 
     :param user_email: str: Identify the user in the database
     :param count_files: int: Determine whether the user's document count should be increased or decreased

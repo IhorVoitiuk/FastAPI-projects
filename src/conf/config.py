@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     cloudinary_api_secret: str = "secret"
     twilio_account_sid: str = "secret_key"
     twilio_auth_token: str = "secret_key"
+    mail_for_receive_contact_form: str = "example@meta.ua"
 
     class Config:
         env_file = ".env"

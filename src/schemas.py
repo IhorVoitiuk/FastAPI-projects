@@ -101,3 +101,10 @@ class SendSMSResponse(SendSMSModel):
 
     class Config:
         orm_mode = True
+
+
+class ContactForm(BaseModel):
+    name: str
+    email: EmailStr
+    phone: str
+    message: str

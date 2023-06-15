@@ -49,17 +49,69 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="main.healthchecker">
 <span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">healthchecker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Session</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.healthchecker" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>The healthchecker function is a function that returns the message &amp;quot;
+Welcome to FastAPI!&amp;quot; if the database connection is successful.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>db</strong> – Session: Get the database session from the dependency</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary with a message</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ihor Voitiuk</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="main.root">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.root" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>The root function is the entry point for the application.
+It returns a Jinja2 template response, which will be rendered by
+the Jinja2 engine and returned to the client.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> – Request: Get the request object that is sent to the server</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A templateresponse object, which is a special type of response</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ihor Voitiuk</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="main.startup">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">startup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.startup" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.submit_form">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">submit_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Form(PydanticUndefined)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Form(PydanticUndefined)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Form(PydanticUndefined)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Form(PydanticUndefined)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.submit_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>The submit_form function is a POST endpoint that accepts the form
+data and sends an email to the configured address.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – Request: Get the request object for the current http request</p></li>
+<li><p><strong>name</strong> – str: Get the name from the form</p></li>
+<li><p><strong>description</strong> – Provide a description for the field</p></li>
+<li><p><strong>email</strong> – str: Get the email address of the person who is submitting a message</p></li>
+<li><p><strong>description</strong> – Provide a description for the form field</p></li>
+<li><p><strong>phone</strong> – str: Get the phone number from the form</p></li>
+<li><p><strong>description</strong> – Provide a description for the field</p></li>
+<li><p><strong>message</strong> – str: Get the message from the form</p></li>
+<li><p><strong>description</strong> – Provide a description for the field</p></li>
+</ul>
+</dd>
+</dl>
+<p>:param : Get the request object
+:return: A templateresponse object
+:doc-author: Ihor Voitiuk</p>
+</dd></dl>
 
 </section>
 <section id="module-src.database.db">
@@ -1186,10 +1238,10 @@ the plain-text password matches the hashed version. If it does, it returns True;
 <li><p>email: The recipient’s email address.</p></li>
 <li><p>username: The recipient’s username. This will be displayed in</p></li>
 </ul>
-<p>the body of the message, and can be customized by editing 
+<p>the body of the message, and can be customized by editing
 templates/email_template.html or templates/email_template_reset_password.html .
-- host: The hostname of your server (e.g., localhost; if you’re running 
-this locally). This will also be displayed in the body of the message, 
+- host: The hostname of your server (e.g., localhost; if you’re running
+this locally). This will also be displayed in the body of the message,
 and can be customized by editing templates/email_template</p>
 </dd>
 </dl>
@@ -1206,6 +1258,29 @@ and can be customized by editing templates/email_template</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A coroutine</p>
+</dd>
+<dt class="field-odd">Doc-author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ihor Voitiuk</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.services.email.mail.send_email_contact_form">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.services.email.mail.</span></span><span class="sig-name descname"><span class="pre">send_email_contact_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EmailStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Contact</span> <span class="pre">form'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.email.mail.send_email_contact_form" title="Permalink to this definition">¶</a></dt>
+<dd><p>The send_email_contact_form function sends an email to the specified recipient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> – EmailStr: Check if the email is a valid email address</p></li>
+<li><p><strong>name</strong> – str: Get the name of the person who is sending</p></li>
+<li><p><strong>phone</strong> – str: Pass the phone number of the person who filled out the contact form</p></li>
+<li><p><strong>message</strong> – str: Send the message from the contact form</p></li>
+<li><p><strong>subj</strong> – Send a different email if the user is trying to reset their password</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A coroutine object</p>
 </dd>
 <dt class="field-odd">Doc-author<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Ihor Voitiuk</p>
@@ -1520,6 +1595,7 @@ The function takes one argument which is the quantity of contacts to be created.
 <li><a class="reference internal" href="#main.healthchecker"><code class="docutils literal notranslate"><span class="pre">healthchecker()</span></code></a></li>
 <li><a class="reference internal" href="#main.root"><code class="docutils literal notranslate"><span class="pre">root()</span></code></a></li>
 <li><a class="reference internal" href="#main.startup"><code class="docutils literal notranslate"><span class="pre">startup()</span></code></a></li>
+<li><a class="reference internal" href="#main.submit_form"><code class="docutils literal notranslate"><span class="pre">submit_form()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-src.database.db">REST API database Db</a><ul>
@@ -1612,6 +1688,7 @@ The function takes one argument which is the quantity of contacts to be created.
 </li>
 <li><a class="reference internal" href="#module-src.services.email.mail">REST API service Email</a><ul>
 <li><a class="reference internal" href="#src.services.email.mail.send_email"><code class="docutils literal notranslate"><span class="pre">send_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.email.mail.send_email_contact_form"><code class="docutils literal notranslate"><span class="pre">send_email_contact_form()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-src.services.export">REST API service Export</a><ul>

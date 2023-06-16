@@ -1,0 +1,8 @@
+**/*.pyc
+.DS_Store
+__pycache__
+**/__pycache__
+test.db
+.pytest_cache
+commands.txt
+postgres-data

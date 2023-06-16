@@ -7,7 +7,7 @@ The Address Book + project represents a personal achievement and serves as a sho
 ## Key Features
 
 - User Registration and Email Verification: Users can register on the platform and verify their email addresses.
-- Access Levels: Each user is assigned one of three access levels: user, moderator, or administrator.
+- Access Levels: Each user is assigned one of three access levels, default user: user, moderator, or administrator.
 - Contact Management: Users can efficiently manage their contacts through the API.
 - Image and PDF Operations: The project enables operations on images and PDF files, including conversion, size reduction, and storage.
 - Email and SMS Messaging: Users can send messages via both email and SMS.

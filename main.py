@@ -43,7 +43,8 @@ async def startup():
     await FastAPILimiter.init(r)
 
 
-origins = ["http://localhost:8000"]
+origins = ["http://only-nance-goit.koyeb.app"]
+
 
 app.add_middleware(
     CORSMiddleware,

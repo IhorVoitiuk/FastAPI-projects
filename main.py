@@ -43,7 +43,7 @@ async def startup():
     await FastAPILimiter.init(r)
 
 
-origins = ["http://only-nance-goit.koyeb.app"]
+origins = ["http://only-nance-goit.koyeb.app", "http://localhost:8000"]
 
 
 app.add_middleware(

@@ -36,7 +36,7 @@ class Auth:
     redis = redis_db.Redis(
         host=settings.redis_host,
         port=settings.redis_port,
-        password=settings.redis_password
+        password=settings.redis_password,
     )
 
     def verify_password(self, plain_password, hashed_password):

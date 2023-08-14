@@ -4,6 +4,10 @@ The Address Book + project is a personal project that demonstrates the capabilit
 
 The Address Book + project represents a personal achievement and serves as a showcase of my skills and expertise in software development. It highlights my ability to work independently on projects and demonstrates my proficiency in utilizing various technologies to build robust and efficient APIs.
 
+Video Preview:
+
+[![Video Preview](https://img.youtube.com/vi/OhyQLIqEUoA/0.jpg)](https://www.youtube.com/watch?v=OhyQLIqEUoA)
+
 ## Key Features
 
 - User Registration and Email Verification: Users can register on the platform and verify their email addresses.
